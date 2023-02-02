@@ -29,7 +29,6 @@ O script lê os nomes a partir de um arquivo Excel (formato .xlsx) e, em seguida
 
     ```
     python gerador_certificados.py
-
     ```
 
 
