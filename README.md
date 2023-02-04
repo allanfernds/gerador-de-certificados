@@ -13,7 +13,7 @@ Esse é um script em Python que lê uma planilha de Excel com a lista de nomes d
 
 ## Funcionamento
 
-O script lê os nomes a partir de um arquivo Excel (formato .xlsx) e, em seguida, cria uma cópia do modelo de certificado para cada nome na lista. O nome de cada destinatário é escrito na imagem do certificado utilizando a biblioteca PIL (Pillow). Por fim, as imagens são salvas em uma pasta com o nome de "certificados" e o nome de cada pessoa como sufixo.
+Este script em Python lê nomes de uma planilha Excel, cria cópias personalizadas do modelo de certificado com cada nome usando a biblioteca PIL, salva as imagens na pasta "certificados" e, finalmente, envia cada certificado por e-mail aos destinatários. O envio de e-mail é realizado através das bibliotecas SMTPLib, MIMEMultipart e PIL, usando seu endereço de e-mail e senha para conectar ao servidor de e-mail.
 
 ## Como usar
 
@@ -22,10 +22,12 @@ O script lê os nomes a partir de um arquivo Excel (formato .xlsx) e, em seguida
     ```
     pip install Pillow pandas
     ```
-2. Insira sua lista de destinatários no arquivo Excel "Ouvintes.xlsx".
+2. Insira sua lista de destinatários no arquivo Excel "Ouvintes.xlsx" (Deve possuir duas colunas, Nome e Email).
 3. Adicione o modelo de certificado em formato PNG.
-4. Adicione a fonte para o texto do certificado na pasta "font".(opcional)
-5. Execute o script:
+4. Adicione seu Email e Senha nas linhas 18 e 19,
+5. Configure o SMTP do seu provedor de email (ja está configurado para usar o Outlook)
+6. Adicione a fonte para o texto do certificado na pasta "font".(opcional)
+7. Execute o script:
 
     ```
     python gerador_certificados.py
