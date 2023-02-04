@@ -6,6 +6,7 @@ Esse é um script em Python que lê uma planilha de Excel com a lista de nomes d
 
 ## Requisitos
 - Python 3
+- Biblioteca smtplib
 - Biblioteca PIL (Pillow)
 - Biblioteca Pandas
 - Modelo de Certificado em formato PNG
